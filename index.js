@@ -6,19 +6,29 @@ document.querySelector('iframe').src = window.location.href.substring(0, window.
 let projectData = {
     0: {
         title: 'Electrocardiogram Monitor',
-        date: 'March 2023 - [Current]'
+        date: 'March 2023 - [Current]',
+        content: 
+            `
+                <div style="display: flex; align-items: center;">
+                    <img style="width: 300px;" src="https://media.licdn.com/dms/image/C4E03AQHYMXNqBgjBkg/profile-displayphoto-shrink_400_400/0/1627411173519?e=1686787200&v=beta&t=TUitufMXm6aEpd6r4hdnSkDVnEl841kYl9GJP8k6wZQ"/>
+                    <p style="margin-left: 10px;">Hello I am a student and I study a lot!</p>   
+                </div>
+            `
     },
     1: {
         title: 'Pulse Oximeter Device',
-        date: 'March 2023 - [Current]'
+        date: 'March 2023 - [Current]',
+        content: `<p>Nothing here yet</p>`
     },
     2: {
         title: 'Heat Stroke Detection Device',
-        date: 'August 2022 - November 2022'
+        date: 'August 2022 - November 2022',
+        content: `<p>Nothing here yet</p>`
     },
     3: {
         title: 'Valvular Heart Disease Literature Review',
-        date: 'August 2022 - November 2022'
+        date: 'August 2022 - November 2022',
+        content: `<p>Nothing here yet</p>`
     },
 }
 
@@ -44,9 +54,11 @@ function selectProject(id){
     let view = document.querySelector('.project-view')
     let title = document.querySelector('.project-view .project-view-title')
     let date = document.querySelector('.project-view .project-view-date')
+    let content = document.querySelector('.project-view .project-view-content')
     grid.style.animation = "fadeOut .25s forwards";
     title.innerHTML = projectData[id].title;
     date.innerHTML = projectData[id].date;
+    content.innerHTML = projectData[id].content;
     setTimeout(()=>{
         grid.style.display = 'none';
         view.style.animation = "fadeIn .25s forwards";

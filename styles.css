@@ -241,3 +241,13 @@ body{
     font-family: var(--main-font);
     color: #555;
 }
+
+.project-view-seperator{
+    width: 600px;
+    margin: 20px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.project-view-content > *{
+    font-family: var(--main-font);
+}
