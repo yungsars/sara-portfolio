@@ -63,7 +63,7 @@ body{
 }
 
 
-.contact-container{
+.navbar{
     height: auto;
     display: flex;
     flex-direction: column;
@@ -75,7 +75,7 @@ body{
 
 
 
-.contact-container a{
+.navbar a{
     font-family: var(--main-font);
     font-weight: 500;
     text-decoration: none;
@@ -86,9 +86,9 @@ body{
     transition-duration: 0.1s;
 }
 
-.contact-container a:not(.active-link):hover{
+.navbar a:not(.active-link):hover{
     border-left: 2px solid #333;
-    padding-left: 5px;
+    padding-left: 8px;
 }
 
 .proj-container:hover, .proj-container:active{
@@ -96,11 +96,11 @@ body{
     transform: scale(1.03);
 }
 
-.contact-container a.active-link{
+.navbar a.active-link{
     font-weight: bold;
     border: none;
     border-left: 5px solid #333;
-    padding-left: 5px;
+    padding-left: 8px;
 }
 
 
@@ -164,9 +164,6 @@ body{
     max-width: 600px;
 }
 
-
-
-
 .special{
     text-decoration: underline;
     text-underline-offset: 2px;
@@ -204,4 +201,24 @@ body{
 
 .active-section{
     display: flex!important;
+}
+
+.contact-container{
+    margin-left: 5px;
+}
+
+.contact-container img{
+    width: 25px;
+    margin: 4px;
+    opacity: .3;
+    transition-duration: .1s;
+}
+
+.contact-container img:hover{
+    opacity: .7;
+    cursor: pointer;
+}
+
+.contact-container img:active{
+    transform: scale(.9);
 }

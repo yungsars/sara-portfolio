@@ -1,6 +1,7 @@
-document.querySelectorAll('.proj-container').forEach((proj, i)=>{
-    proj.style.animationDelay = `${0.075*i}s`;
-})
+// document.querySelectorAll('.proj-container').forEach((proj, i)=>{
+//     proj.style.animationDelay = `${0.075*i}s`;
+// })
+document.querySelector('iframe').src = window.location.href.substring(0, window.location.href.lastIndexOf('/')) + '/Resume.pdf'
 
 function activate(section){
     // Update active nav link
