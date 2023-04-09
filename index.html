@@ -2,8 +2,7 @@
 
 <head>
     <title>Sara Abubeker</title>
-    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;500&family=PT+Serif&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;500;700&family=PT+Serif&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
     <script defer src="index.js"></script>
 </head>
@@ -12,10 +11,8 @@
     <div class="sidebar">
         <div class="name-container">
             <h1>Sara<br>Abubeker</h1>
-            <p>Hi! I'm a <span class="special bold">Biomedical Engineering</span> student at UC Berkeley with a concentration on
-                medical devices.</p>
-            <p class="delayed">I'm passionate about using engineering to develop innovative healthcare technologies that
-                improve patient care.</p>
+            <p>Hi! I'm a <span class="special">Bioengineering</span> student at UC Berkeley with a concentration in medical devices.</p>
+            <p class="delayed">I'm passionate about using engineering to develop innovative healthcare technologies that improve patient care.</p>
         </div>
         <div class="contact-container">
             <a href="mailto:sara.abubeker@berkeley.edu" target="_blank">
@@ -26,7 +23,7 @@
             </a>
         </div>
         <div class="navbar">
-            <a href="javascript:void(0);" id="projects-link" onclick="activate('projects')" class="active-link">Projects</a>
+            <a href="javascript:void(0);" id="projects-link" onclick="resetProjectView(); activate('projects')" class="active-link">Projects</a>
             <a href="javascript:void(0);" id="courses-link" onclick="activate('courses')">Courses</a>
             <a href="javascript:void(0);" id="resume-link" onclick="activate('resume')">Resume</a>
         </div>
@@ -34,26 +31,30 @@
     <div class="main-content">
         <div id="projects-section" class="content-section active-section">
             <h1>Projects</h1>
+            <div class="project-view">
+                <h1 class="project-view-title"></h1>
+                <p class="project-view-date"></p>
+            </div>
             <div class="proj-grid">
-                <div class="proj-container">
+                <div class="proj-container" onclick="selectProject(0)">
                     <h1 class="proj-title">Electrocardiogram Monitor</h1>
                     <p class="proj-summary">Designed and built an ECG circuit using an AD620 instrumentation amplifier,
                         displaying the signal on an oscilloscope and testing it through Arduino</p>
                     <p class="proj-date">March 2023 - <span class="new">[Current]</span></p>
                 </div>
-                <div class="proj-container">
+                <div class="proj-container" onclick="selectProject(1)">
                     <h1 class="proj-title">Pulse Oximeter Device</h1>
                     <p class="proj-summary">Built a pulse oximeter circuit to measure blood oxygen saturation</p>
                     <p class="proj-date">March 2023 - <span class="new">[Current]</span></p>
                 </div>
-                <div class="proj-container">
+                <div class="proj-container" onclick="selectProject(2)">
                     <h1 class="proj-title">Heat Stroke Detection Device</h1>
                     <p class="proj-summary">Designed a circuit to detect heat stroke by measuring physiological signals
                         and notifying the user of risk when signals indicate transition from heat exhaustion to heat
                         stroke.</p>
                     <p class="proj-date">August 2022 - <span class="old">November 2022</span></p>
                 </div>
-                <div class="proj-container">
+                <div class="proj-container" onclick="selectProject(3)">
                     <h1 class="proj-title">
                         Valvular Heart Disease Literature Review</h1>
                     <p class="proj-summary">Reviewed the mechanisms of valve dysfunction in valvular heart disease and

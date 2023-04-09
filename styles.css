@@ -35,7 +35,7 @@ body{
     bottom: 0;
     font-family: var(--main-font);
     font-weight: bold;
-    color: #555
+    color: #555;
 }
 
 .proj-container{
@@ -46,8 +46,6 @@ body{
     
     transition-duration: 0.1s;
     cursor: pointer;
-    /* opacity: 0; */
-    /* animation: slideIn .25s; */
     background-color: rgb(0, 0, 0, .02);
     overflow: visible;
 }
@@ -169,6 +167,7 @@ body{
     text-underline-offset: 2px;
 }
 
+
 .bold{
     font-weight: bold;
 }
@@ -221,4 +220,24 @@ body{
 
 .contact-container img:active{
     transform: scale(.9);
+}
+
+.contact-container a{
+    text-decoration: none;
+}
+
+.project-view{
+    display: none;
+    width: 700px;
+    height: 550px;
+}
+
+.project-view > .project-view-title{
+    font-family: 'PT Serif', sans-serif;
+    color: rgb(188, 155, 106);
+}
+
+.project-view > .project-view-date{
+    font-family: var(--main-font);
+    color: #555;
 }

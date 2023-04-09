@@ -3,6 +3,25 @@
 // })
 document.querySelector('iframe').src = window.location.href.substring(0, window.location.href.lastIndexOf('/')) + '/Resume.pdf'
 
+let projectData = {
+    0: {
+        title: 'Electrocardiogram Monitor',
+        date: 'March 2023 - [Current]'
+    },
+    1: {
+        title: 'Pulse Oximeter Device',
+        date: 'March 2023 - [Current]'
+    },
+    2: {
+        title: 'Heat Stroke Detection Device',
+        date: 'August 2022 - November 2022'
+    },
+    3: {
+        title: 'Valvular Heart Disease Literature Review',
+        date: 'August 2022 - November 2022'
+    },
+}
+
 function activate(section){
     // Update active nav link
     document.querySelector('.active-link').classList.remove('active-link');
@@ -18,4 +37,27 @@ function activate(section){
         newSection.classList.add('active-section');
         newSection.style.animation = "fadeIn .25s forwards";
     }, 250)
+}
+
+function selectProject(id){
+    let grid = document.querySelector('.proj-grid')
+    let view = document.querySelector('.project-view')
+    let title = document.querySelector('.project-view .project-view-title')
+    let date = document.querySelector('.project-view .project-view-date')
+    grid.style.animation = "fadeOut .25s forwards";
+    title.innerHTML = projectData[id].title;
+    date.innerHTML = projectData[id].date;
+    setTimeout(()=>{
+        grid.style.display = 'none';
+        view.style.animation = "fadeIn .25s forwards";
+        view.style.display = 'block';
+    }, 250)
+}
+
+function resetProjectView(){
+    let view = document.querySelector('.project-view')
+    let grid = document.querySelector('.proj-grid')
+    grid.style.animation = "fadeIn .25s forwards";
+    grid.style.display = 'grid';
+    view.style.display = 'none';
 }
